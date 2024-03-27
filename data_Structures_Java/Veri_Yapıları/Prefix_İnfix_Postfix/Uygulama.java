@@ -26,7 +26,7 @@ public class Uygulama
     }
 
 
-    public static String inFixPosFix(String inFixIfade)
+    public static String inFixPostFix(String inFixIfade)
     {
         Stack <Character> y = new Stack<>();
         String posIfade = "";
