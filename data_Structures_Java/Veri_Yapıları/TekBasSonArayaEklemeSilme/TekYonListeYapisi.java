@@ -13,6 +13,76 @@ public class TekYonListeYapisi {
     }
 
 
+    public void siraylaEkle(int data)
+    {
+        Node eleman = new Node();
+        eleman.data = data;
+        
+        if(head == null)
+        {
+            head = eleman;
+            tail = eleman;
+        }
+
+        else if(head.next == null)
+        {
+            if(eleman.data < head.data)
+            {
+                eleman.next = head;
+                head = eleman;
+            }
+
+            else
+            {
+               tail.next = eleman;
+               tail = eleman;
+            }
+
+        }
+
+        else
+        {
+            Node temp = head;
+
+            if(eleman.data < head.data)
+            {
+                eleman.next = head;
+                head = eleman;
+            }
+
+            else if(tail.data < eleman.data)
+            {
+                tail.next = eleman;
+                tail = eleman;
+            }
+
+            else
+            {
+                while(temp != null)
+                {
+                    
+                    
+                    if(eleman.data < temp.next.data)
+                    {
+
+                        eleman.next = temp.next;
+                        temp.next = eleman;
+                        break;
+                    
+                    }
+
+                    temp = temp.next;
+                    
+
+                }
+            }
+            
+        }
+
+
+    }
+
+
     public void basaEkle(int x)
     {
         Node eleman = new Node();

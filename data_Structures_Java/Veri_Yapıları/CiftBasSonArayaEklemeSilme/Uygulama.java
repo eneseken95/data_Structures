@@ -7,7 +7,7 @@ public class Uygulama {
         
         CiftBagliListe liste = new CiftBagliListe();
 
-        liste.basaEkle(10);
+        /*liste.basaEkle(10);
         liste.sonaEkle(20);
         liste.basaEkle(25);
         liste.sonaEkle(5);
@@ -22,26 +22,36 @@ public class Uygulama {
         liste.sonaEkle(25);
         liste.Sil(12, 25);
         liste.Sil(3, 30);
-        liste.Sil(1, 25);
-     
+        liste.Sil(1, 25);*/
 
+
+
+        liste.siraylaEkle(2);
+        liste.siraylaEkle(5);
+        liste.siraylaEkle(3);
+        liste.siraylaEkle(8);
 
         liste.yazdir();
         
-        /*System.out.println();
-        System.out.println();*/
-
-
-        //liste.sondanYazdir();
 
         System.out.println();
         System.out.println();
+
+
+        liste.sondanYazdir();
+
+
+        System.out.println();
+        System.out.println();
+
 
         liste.elemanSayisi();
 
+
         System.out.println();
         System.out.println();
 
+        
         System.out.println("Bulunan eleman : " + liste.elemanBul(20).data);
 
         

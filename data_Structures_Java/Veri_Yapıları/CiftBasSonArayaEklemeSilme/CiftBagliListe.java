@@ -6,6 +6,75 @@ public class CiftBagliListe {
     Node head = null;
     Node tail = null;
 
+
+    public void siraylaEkle(int data)
+    {
+       Node eleman = new Node();
+       eleman.data = data;
+       
+       if(head == null)
+       {
+           head = eleman;
+           tail = eleman;
+       }
+
+       else if(head.next == null)
+       {
+           if(eleman.data < head.data)
+           {
+               eleman.next = head;
+               head.prev = eleman;
+               head = eleman;
+           }
+
+           else
+           {
+               tail.next = eleman;
+               eleman.prev = tail;
+               tail = eleman;
+           }
+       }
+
+       else
+       {
+           Node temp = head;
+
+           if(eleman.data < head.data)
+           {
+               eleman.next = head;
+               head.prev = eleman;
+               head = eleman;
+           }
+
+           else if(tail.data < eleman.data)
+           {
+               tail.next = eleman;
+               eleman.prev = tail;
+               tail = eleman;
+           }
+
+           else
+           {
+               while(temp != null)
+               {
+                   if(eleman.data < temp.next.data)
+                   {
+                       eleman.next = temp.next;
+                       temp.next.prev = eleman;
+                       temp.next = eleman;
+                       eleman.prev = temp;
+                       break;
+                   }
+
+                   temp = temp.next;
+
+               }
+           }
+       }
+
+    }
+
+
     void basaEkle(int data)
     {
         Node eleman = new Node();

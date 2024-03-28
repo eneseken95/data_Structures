@@ -6,7 +6,7 @@ public class Uygulama {
     
     TekYonListeYapisi liste = new TekYonListeYapisi();
 
-    liste.basaEkle(11);
+    /*liste.basaEkle(11);
     liste.sonaEkle(22);
     liste.basaEkle(5);
     liste.sonaEkle(33);
@@ -24,15 +24,23 @@ public class Uygulama {
     liste.Sil(2, 4);
     liste.Sil(1, 10);
     liste.Sil(5, 22);
-    liste.Sil(1, 5);
+    liste.Sil(1, 5);*/
+
+
+    liste.siraylaEkle(5);
+    liste.siraylaEkle(2);
+    liste.siraylaEkle(3);
+    liste.siraylaEkle(1);
+    liste.siraylaEkle(8);
+    liste.siraylaEkle(6);
+    
+ 
+    liste.yazdir();
 
     
-   
-   
     System.out.println("listenin başındaki eleman : " + liste.head.data);
     System.out.println("listenin sonundaki eleman : " + liste.tail.data);
 
-    liste.yazdir();
 
    }
     
