@@ -329,22 +329,20 @@ public class ikiliAramaAgac {
 
             else if(kokDugum.sol != null)
             {
-                kokDugum = kokDugum.sol;
-                kokDugum.sol = null;
                 System.out.println("Kontrol tek sol cocuk  |  silinen deger :"  + deger);
                 System.out.println();
-                return null;
+                return kokDugum.sol;
             }
+          
 
             else if(kokDugum.sag != null)
             {
-                kokDugum = kokDugum.sag;
-                kokDugum.sag = null;
                 System.out.println("Kontrol tek sag cocuk  |  silinen deger :"  + deger);
                 System.out.println();
-                return null;
+                return kokDugum.sag;
             }
 
+            
             else 
             {
                 System.out.println("Kontrol yaprak |  silinen deger : " + deger);
